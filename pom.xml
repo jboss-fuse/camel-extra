@@ -37,18 +37,6 @@
   <name>Camel Extra</name>
   <description>Camel Extra Parent POM</description>
 
-  <issueManagement>
-    <system>GitHub Issues</system>
-    <url>https://github.com/camel-extra/camel-extra/issues</url>
-  </issueManagement>
-
-  <mailingLists>
-    <mailingList>
-      <name>User List</name>
-      <archive>http://camel-extra.1091541.n5.nabble.com</archive>
-    </mailingList>
-  </mailingLists>
-
   <prerequisites>
     <maven>3.0.4</maven>
   </prerequisites>
@@ -122,8 +110,6 @@
     <xmlrpc-version>2.0.1</xmlrpc-version>
     <zeromq-scala-binding-version>0.0.7</zeromq-scala-binding-version>
   </properties>
-
-  <url>https://camel-extra.github.io</url>
 
   <organization>
     <name>Apache Software Foundation</name>
