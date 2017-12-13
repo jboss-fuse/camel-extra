@@ -221,6 +221,16 @@
       <name>Codehaus Repository</name>
       <url>http://repository.codehaus.org/</url>
     </pluginRepository>
+		<pluginRepository>
+			<id>ea</id>
+			<url>https://repository.jboss.org/nexus/content/groups/ea</url>
+			<layout>default</layout>
+		</pluginRepository>
+		<pluginRepository>
+			<id>RH2</id>
+			<url>http://download.eng.bos.redhat.com/brewroot/repos/jb-fsw-6.2-build/latest/maven</url>
+			<layout>default</layout>
+		</pluginRepository>
   </pluginRepositories>
 
         <distributionManagement>
