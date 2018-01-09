@@ -245,6 +245,7 @@ public class SmbProducer extends GenericFileProducer<SmbFile> implements Service
     @Override
     public void writeFile(Exchange exchange, String fileName) throws GenericFileOperationFailedException {
 
+        int size = -1;
         if (log.isDebugEnabled()) {
             log.debug("writeFile() fileName[" + fileName + "]");
         }
@@ -261,6 +262,7 @@ public class SmbProducer extends GenericFileProducer<SmbFile> implements Service
             if (directory != null && !operations.buildDirectory(directory, absolute)) {
                 log.warn("Cannot build directory [" + directory + "] (could be because of denied permissions)");
             }
+            size = file.length();
         }
 
         // upload
@@ -268,7 +270,7 @@ public class SmbProducer extends GenericFileProducer<SmbFile> implements Service
             log.debug("About to write [" + fileName + "] to [" + getEndpoint() + "] from exchange [" + exchange + "]");
         }
 
-        boolean success = operations.storeFile(fileName, exchange);
+        boolean success = operations.storeFile(fileName, exchange, size);
         if (!success) {
             throw new GenericFileOperationFailedException("Error writing file [" + fileName + "]");
         }
