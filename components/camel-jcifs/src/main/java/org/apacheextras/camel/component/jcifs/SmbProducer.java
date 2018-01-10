@@ -245,7 +245,7 @@ public class SmbProducer extends GenericFileProducer<SmbFile> implements Service
     @Override
     public void writeFile(Exchange exchange, String fileName) throws GenericFileOperationFailedException {
 
-        int size = -1;
+        long size = -1;
         if (log.isDebugEnabled()) {
             log.debug("writeFile() fileName[" + fileName + "]");
         }
