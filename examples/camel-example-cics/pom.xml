@@ -41,7 +41,7 @@
 		
 		<!-- Versions -->
 		<org.apache.camel.version>2.18.0</org.apache.camel.version>
-    <org.slf4j.version>1.7.5</org.slf4j.version>
+    <org.slf4j.version>1.7.22.redhat-2</org.slf4j.version>
     <log4j.version>1.2.17</log4j.version>
 
 		<!-- Features -->
