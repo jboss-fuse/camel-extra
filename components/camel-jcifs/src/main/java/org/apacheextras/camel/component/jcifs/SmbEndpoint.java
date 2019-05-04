@@ -27,6 +27,7 @@ import org.apache.camel.Processor;
 import org.apache.camel.component.file.GenericFile;
 import org.apache.camel.component.file.GenericFileEndpoint;
 import org.apache.camel.component.file.GenericFileProducer;
+import org.apache.camel.component.file.GenericFileProcessStrategy;
 import org.apache.camel.impl.DefaultExchange;
 import org.apache.camel.processor.idempotent.MemoryIdempotentRepository;
 import org.apache.camel.spi.UriEndpoint;
@@ -48,7 +49,7 @@ public class SmbEndpoint extends GenericFileEndpoint<SmbFile> {
 
     @Override
     public SmbConsumer createConsumer(Processor processor) throws Exception {
-        SmbConsumer consumer = new SmbConsumer(this, processor, createSmbOperations());
+        SmbConsumer consumer = new SmbConsumer(this, processor, createSmbOperations(),processStrategy != null ? processStrategy : createGenericFileStrategy());
 
         if (isDelete() && getMove() != null) {
             throw new IllegalArgumentException("You cannot set both delete=true and move options");
