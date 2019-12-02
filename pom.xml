@@ -42,7 +42,7 @@
   </prerequisites>
 
   <properties>
-    <camel-version>2.23.2.fuse-740001</camel-version>
+    <camel-version>2.23.2.fuse-760005</camel-version>
 
     <site-repo-url>scpexe://people.apache.org/www/activemq.apache.org/camel/maven/</site-repo-url>
     <sonatypeOssDistMgmtSnapshotsUrl>https://oss.sonatype.org/content/repositories/snapshots/
