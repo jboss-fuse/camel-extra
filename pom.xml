@@ -126,17 +126,6 @@
   </licenses>
 
   <repositories>
-    <repository>
-      <id>apache.content.snapshots</id>
-      <name>Apache Development Snapshot Repository</name>
-      <url>https://repository.apache.org/content/repositories/snapshots/</url>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
     <!--repository>
       <id>camel.extra.others</id>
       <name>Camel Extra - 3rd parties dependencies</name>
@@ -146,54 +135,27 @@
       </snapshots>
     </repository-->
     <repository>
-      <id>neo4j.releases.repo</id>
-      <url>http://m2.neo4j.org/content/repositories/releases/</url>
+      <id>ea</id>
+      <name>Fuse Early Access Repository</name>
+      <url>https://repository.jboss.org/nexus/content/groups/ea</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
       <releases>
         <enabled>true</enabled>
       </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
     </repository>
-<repository>
-            <id>ea</id>
-            <name>Fuse Early Access Repository</name>
-            <url>https://repository.jboss.org/nexus/content/groups/ea</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-        </repository>
-		<repository>
-            <id>brewroot</id>
-            <name>Brew Repository</name>
-            <url>http://download.eng.bos.redhat.com/brewroot/repos/jb-fuse-6.2-build/latest/maven</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>never</updatePolicy>
-            </releases>
-        </repository>
-		<repository>
-			<id>fusesource-third-party-internal</id>
-			<url>https://repository.jboss.org/nexus/content/repositories/fs-releases/</url>
-			<layout>default</layout>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-		</repository>
-		<repository>
-			<id>RH2</id>
-			<url>http://download.eng.bos.redhat.com/brewroot/repos/jb-fsw-6.2-build/latest/maven</url>
-			<layout>default</layout>
-		</repository>
+    <repository>
+      <id>fusesource-third-party-internal</id>
+      <url>https://repository.jboss.org/nexus/content/repositories/fs-releases/</url>
+      <layout>default</layout>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+    </repository>
     <repository>
       <id>jboss.public.repo</id>
       <name>JBoss Public Repository</name>
@@ -209,42 +171,24 @@
 
   <pluginRepositories>
     <pluginRepository>
-      <id>apache.snapshots</id>
-      <name>Apache Development Snapshot Repository</name>
-      <url>http://repository.apache.org/snapshots/</url>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
+      <id>ea</id>
+      <url>https://repository.jboss.org/nexus/content/groups/ea</url>
+      <layout>default</layout>
     </pluginRepository>
-    <pluginRepository>
-      <id>codehaus.repo</id>
-      <name>Codehaus Repository</name>
-      <url>http://repository.codehaus.org/</url>
-    </pluginRepository>
-		<pluginRepository>
-			<id>ea</id>
-			<url>https://repository.jboss.org/nexus/content/groups/ea</url>
-			<layout>default</layout>
-		</pluginRepository>
-		<pluginRepository>
-			<id>RH2</id>
-			<url>http://download.eng.bos.redhat.com/brewroot/repos/jb-fsw-6.2-build/latest/maven</url>
-			<layout>default</layout>
-		</pluginRepository>
   </pluginRepositories>
 
-        <distributionManagement>
-            <repository>
-                <id>jboss-releases-repository</id>
-                <name>JBoss Releases Repository</name>
-                <url>https://repository.jboss.org/nexus/service/local/staging/deploy/maven2</url>
-            </repository>
-            <snapshotRepository>
-                <id>jboss-snapshots-repository</id>
-                <name>JBoss Snapshots Repository</name>
-                <url>https://repository.jboss.org/nexus/content/repositories/snapshots</url>
-            </snapshotRepository>
-        </distributionManagement>
+  <distributionManagement>
+    <repository>
+      <id>jboss-releases-repository</id>
+      <name>JBoss Releases Repository</name>
+      <url>https://repository.jboss.org/nexus/service/local/staging/deploy/maven2</url>
+    </repository>
+    <snapshotRepository>
+      <id>jboss-snapshots-repository</id>
+      <name>JBoss Snapshots Repository</name>
+      <url>https://repository.jboss.org/nexus/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
 
   <scm>
     <connection>scm:git:https://github.com/camel-extra/camel-extra.git</connection>
