@@ -112,7 +112,7 @@ http://www.gnu.org/licenses/gpl-2.0-standalone.html
     </dependency>
     <dependency>
       <groupId>org.osgi</groupId>
-      <artifactId>org.osgi.core</artifactId>
+      <artifactId>osgi.core</artifactId>
       <version>${osgi-version}</version>
       <scope>test</scope>
     </dependency>
