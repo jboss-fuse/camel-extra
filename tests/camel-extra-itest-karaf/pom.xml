@@ -34,7 +34,7 @@ http://www.gnu.org/licenses/gpl-2.0-standalone.html
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <javax-inject-version>1.0.0.redhat-00008</javax-inject-version>
+    <javax-inject-version>1.0.0.redhat-00009</javax-inject-version>
     <karf-test-version>${karaf4-version}</karf-test-version>
   </properties>
 
